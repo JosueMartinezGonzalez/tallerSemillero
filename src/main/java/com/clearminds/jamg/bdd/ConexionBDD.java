@@ -20,6 +20,7 @@ public class ConexionBDD {
 		}
 		return p.getProperty(nomprepro);
 	}
+	
 	public static Connection obtenerConexion () {
 		String usuario = leerPropiedad("usuario");
 		String password = leerPropiedad("password");
@@ -30,7 +31,6 @@ public class ConexionBDD {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		// Conexion.conect(url, usuario, password);
 		return con;
 	}
 }

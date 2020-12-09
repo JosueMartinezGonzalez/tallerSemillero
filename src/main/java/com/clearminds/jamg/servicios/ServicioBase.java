@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.clearminds.jamg.bdd.ConexionBDD;
+import com.clearminds.jamg.excepciones.BDDException;
 
 public class ServicioBase {
-	private Connection conexion;
+	private static Connection conexion;
 	
-	public void abrirConexion() {
-		conexion = ConexionBDD.obtenerConexion();
+	public void abrirConexion () {		
+			conexion = ConexionBDD.obtenerConexion();
 	}
 	
 	public void cerrarConexion() {

@@ -6,6 +6,7 @@
   <artifactId>middleware</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
+  
 
   <name>middleware</name>
   <url>http://maven.apache.org</url>
@@ -25,11 +26,16 @@
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
     <version>8.0.22</version>
-</dependency>
-<dependency>
+	</dependency>
+	<dependency>
 	<groupId>com.microsoft.sqlserver</groupId>
 	<artifactId>mssql-jdbc</artifactId>
 	<version>9.1.1.jre8-preview</version>
-</dependency>
+	</dependency>
+	<dependency>
+  <groupId>com.clearminds.jamg</groupId>
+  <artifactId>model</artifactId>
+  <version>1.0.0</version>
+  </dependency>
   </dependencies>
 </project>
