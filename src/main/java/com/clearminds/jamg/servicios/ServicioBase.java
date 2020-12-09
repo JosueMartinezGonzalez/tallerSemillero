@@ -25,5 +25,14 @@ public class ServicioBase {
 		}
 
 		
+		
+	}
+
+	public static Connection getConexion() {
+		return conexion;
+	}
+
+	public static void setConexion(Connection conexion) {
+		ServicioBase.conexion = conexion;
 	}
 }
