@@ -1,8 +1,10 @@
 package com.clearminds.jamg.bdd;
 
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
-import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
 
 public class ConexionBDD {
@@ -17,5 +19,18 @@ public class ConexionBDD {
 			}			
 		}
 		return p.getProperty(nomprepro);
+	}
+	public static Connection obtenerConexion () {
+		String usuario = leerPropiedad("usuario");
+		String password = leerPropiedad("password");
+		String url = leerPropiedad("urlConexion");
+		Connection con = null;
+		try {
+			 con = DriverManager.getConnection(url+";user="+usuario+";password="+password+";");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		// Conexion.conect(url, usuario, password);
+		return con;
 	}
 }
