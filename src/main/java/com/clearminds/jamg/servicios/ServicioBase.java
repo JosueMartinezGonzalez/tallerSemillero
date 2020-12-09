@@ -9,7 +9,7 @@ import com.clearminds.jamg.excepciones.BDDException;
 public class ServicioBase {
 	private static Connection conexion;
 	
-	public void abrirConexion () {		
+	public void abrirConexion () throws BDDException {		
 			conexion = ConexionBDD.obtenerConexion();
 	}
 	
